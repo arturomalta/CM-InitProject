@@ -10,6 +10,10 @@
 
 @interface Start : UIViewController
 
+//Labels
+@property (strong, nonatomic) IBOutlet UILabel *lblWelcome;
+
+
 
 @end
 
