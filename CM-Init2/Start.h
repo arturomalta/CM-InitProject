@@ -14,6 +14,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblWelcome;
 
 
+//Actions
+- (IBAction)btn1Pressed:(id)sender;
+
 
 @end
 
