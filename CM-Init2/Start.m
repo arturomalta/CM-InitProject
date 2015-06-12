@@ -8,6 +8,7 @@
 #import "Start.h"
 
 NSMutableArray  *maNames;
+NSMutableArray  *maImgs;
 
 int iIndex = 0;
 
@@ -31,15 +32,21 @@ int iIndex = 0;
 //-------------------------------------------------------------------------------
 - (void)initController {
     self.lblWelcome.text    = @"Names";
-    maNames           = [[NSMutableArray alloc] init];
-    maNames           = [[NSMutableArray alloc] initWithObjects: @"Walter", @"Carlos", @"Vita", @"Carlos", @"Diego", nil];
+    maNames         = [[NSMutableArray alloc] init];
+    maNames         = [[NSMutableArray alloc] initWithObjects: @"Walter", @"Carlos", @"Vita", @"Carlos", @"Diego", nil];
+    maImgs          = [[NSMutableArray alloc] init];
+    maImgs          = [[NSMutableArray alloc] initWithObjects: @"avatars-1.png", @"avatars-2.png", @"avatars-3.png", @"avatars-4.png", @"avatars-5.png", nil];
 }
 /**********************************************************************************************/
 #pragma mark - Button methods
 /**********************************************************************************************/
 - (IBAction)btn1Pressed:(id)sender {
-    self.lblWelcome.text                        = maNames[iIndex];
+    self.lblWelcome.text    = maNames[iIndex];
+    self.imgUser.image      = [UIImage imageNamed:maImgs[iIndex]];
     iIndex++;
     self.lblWelcome.adjustsFontSizeToFitWidth   = YES;
+    if (iIndex >= maNames.count) {
+        iIndex = 0;
+    }
 }
 @end

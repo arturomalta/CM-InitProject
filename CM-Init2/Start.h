@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface Start : UIViewController
+//Images
+@property (strong, nonatomic) IBOutlet UIImageView *imgUser;
 
 //Labels
 @property (strong, nonatomic) IBOutlet UILabel *lblWelcome;
