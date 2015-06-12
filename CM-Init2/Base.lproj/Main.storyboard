@@ -42,12 +42,21 @@
                                 <rect key="frame" x="100" y="48" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Tlw-Yf-fYJ" userLabel="switchUser">
+                                <rect key="frame" x="60" y="308" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.29019609089999998" green="0.54509806630000002" blue="0.96470588450000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchUserChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="YaW-Ns-vgD"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imgUser" destination="jIj-3W-Xey" id="jXB-dL-Lul"/>
                         <outlet property="lblWelcome" destination="ipP-pk-ANg" id="aCO-9O-uyo"/>
+                        <outlet property="switchUser" destination="Tlw-Yf-fYJ" id="6mr-ns-CY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

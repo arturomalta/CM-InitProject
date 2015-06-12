@@ -15,10 +15,12 @@
 //Labels
 @property (strong, nonatomic) IBOutlet UILabel *lblWelcome;
 
+//Switch
+@property (strong, nonatomic) IBOutlet UISwitch *switchUser;
 
 //Actions
 - (IBAction)btn1Pressed:(id)sender;
-
+- (IBAction)switchUserChanged:(id)sender;
 
 @end
 

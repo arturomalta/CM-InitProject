@@ -38,7 +38,7 @@ int iIndex = 0;
     maImgs          = [[NSMutableArray alloc] initWithObjects: @"avatars-1.png", @"avatars-2.png", @"avatars-3.png", @"avatars-4.png", @"avatars-5.png", nil];
 }
 /**********************************************************************************************/
-#pragma mark - Button methods
+#pragma mark - Button and swicth methods
 /**********************************************************************************************/
 - (IBAction)btn1Pressed:(id)sender {
     self.lblWelcome.text    = maNames[iIndex];
@@ -47,6 +47,15 @@ int iIndex = 0;
     self.lblWelcome.adjustsFontSizeToFitWidth   = YES;
     if (iIndex >= maNames.count) {
         iIndex = 0;
+    }
+}
+//-------------------------------------------------------------------------------
+- (IBAction)switchUserChanged:(id)sender {
+    if (self.switchUser.isOn) {
+        self.imgUser.hidden = NO;
+    }
+    else {
+        self.imgUser.hidden = YES;
     }
 }
 @end
